@@ -1,0 +1,8 @@
+
+<input type="hidden" name="{{ name }}-persistent" value="{% firstof existing_path value.name %}" />
+
+{% if thumb_url %}
+    {% load thumbnail %}
+    <a href="{{ image_url }}" target="_blank"><img src="{{ thumb_url }}" /></a><br />
+{% endif %}
+
